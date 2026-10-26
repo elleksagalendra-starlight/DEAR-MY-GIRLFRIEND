@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff5f7">
+  <title>Surat kecil untuk kamu ♡</title>
+  <style>
+    :root{--pink:#f7a8bf;--deep:#c9577b;--rose:#ffe1e9;--cream:#fffafb;--ink:#694b57;--muted:#a7838e}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100svh;padding:24px 16px;display:grid;place-items:center;overflow-x:hidden;background:radial-gradient(ellipse at 15% 15%,#fff 0 8%,transparent 35%),radial-gradient(ellipse at 90% 85%,#ffe6ed 0 10%,transparent 34%),linear-gradient(145deg,#fff8fa,#fff0f4);font-family:ui-rounded,"Arial Rounded MT Bold",system-ui,-apple-system,sans-serif;color:var(--ink)}
+    .wrap{width:min(100%,420px);position:relative}
+    .tiny{position:absolute;font-size:23px;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 3px 5px #eeb2c255)}
+    .tiny.one{top:8px;left:-2px}.tiny.two{top:64px;right:-5px;animation-delay:.7s}.tiny.three{bottom:32px;left:5px;animation-delay:1.2s}
+    .card{position:relative;isolation:isolate;background:rgba(255,255,255,.88);border:1px solid #fff;box-shadow:0 22px 65px #c96c8721,0 4px 14px #c96c8710;border-radius:30px;padding:25px 23px 23px;text-align:center;overflow:hidden}
+    .card:before{content:"";position:absolute;z-index:-1;width:240px;height:240px;border-radius:50%;background:#fff0f4;top:-135px;left:-85px}.card:after{content:"";position:absolute;z-index:-1;width:190px;height:190px;border-radius:50%;background:#fff5f7;bottom:-120px;right:-76px}
+    .topline{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:99px;background:#fff4f7;color:#b35b75;font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+    .scene{height:175px;display:grid;place-items:center;margin:5px auto 0;position:relative}
+    .moon{position:absolute;width:120px;height:120px;top:22px;border-radius:50%;background:#ffe6ec}
+    .bear{position:relative;width:111px;height:103px;margin-top:25px;border-radius:48% 48% 43% 43%;background:linear-gradient(150deg,#fff 10%,#f9e9e5 95%);box-shadow:inset -7px -8px 0 #f4dfdc,0 12px 22px #ce839322;transform:rotate(-4deg)}
+    .ear{position:absolute;width:35px;height:37px;top:-11px;border-radius:50%;background:#f8e7e2;border:7px solid #fff}.ear.left{left:5px}.ear.right{right:5px}
+    .eye{position:absolute;top:43px;width:6px;height:8px;background:#66515a;border-radius:50%}.eye.left{left:35px}.eye.right{right:35px}
+    .blush{position:absolute;top:57px;width:17px;height:9px;border-radius:50%;background:#f5b2bd;opacity:.75}.blush.left{left:17px}.blush.right{right:17px}
+    .nose{position:absolute;top:53px;left:50%;transform:translateX(-50%);width:9px;height:7px;background:#cf8390;border-radius:50% 50% 55% 55%}
+    .mouth{position:absolute;top:62px;left:50%;width:10px;height:6px;transform:translateX(-50%);border-bottom:2px solid #92717a;border-radius:50%}
+    .heart{position:absolute;top:11px;right:18px;font-size:32px;transform:rotate(10deg);animation:beat 1.5s ease-in-out infinite}
+    .spark{position:absolute;color:#e69bad;font-size:20px}.spark.s1{top:30px;left:44px}.spark.s2{right:49px;bottom:20px;font-size:15px}
+    h1{margin:1px 0 9px;font-size:clamp(27px,7vw,34px);line-height:1.13;letter-spacing:-.045em;color:#754c5b}
+    h1 span{color:#d87591}
+    .intro{margin:0 auto 18px;max-width:310px;color:#987984;font-size:14px;line-height:1.65}
+    .namebox{display:flex;align-items:center;gap:8px;margin:0 auto 15px;width:min(100%,285px);padding:0 13px;border:1px solid #f4dce3;background:#fffafb;border-radius:14px;transition:.2s}
+    .namebox:focus-within{border-color:#e7a1b4;box-shadow:0 0 0 3px #f8dce455}
+    .namebox span{font-size:15px}.namebox input{min-width:0;width:100%;padding:11px 0;border:0;outline:0;background:transparent;color:#7b5361;font:600 13px inherit;font-size:13px}
+    .letter{max-width:322px;margin:0 auto 18px;padding:15px 15px 14px;border-radius:17px;background:linear-gradient(135deg,#fff5f7,#fff9fa);border:1px dashed #efc6d1;color:#795b65;font-size:14px;line-height:1.7;text-align:left}
+    .letter p{margin:0}.letter .sign{display:block;margin-top:9px;text-align:right;font-size:12px;color:#bc7188;font-weight:700}
+    .buttons{display:grid;gap:9px}
+    button{width:100%;min-height:49px;border:0;border-radius:15px;padding:12px 16px;font:700 14px inherit;font-size:14px;cursor:pointer;transition:transform .16s,box-shadow .16s,background .16s;-webkit-tap-highlight-color:transparent}
+    button:active{transform:scale(.98)}
+    .hug{color:#fff;background:linear-gradient(135deg,#ec91aa,#d96f8d);box-shadow:0 8px 18px #df809833}
+    .hug:hover{box-shadow:0 11px 23px #df80984a;transform:translateY(-1px)}
+    .secret{color:#ab657b;background:#fff1f5;border:1px solid #f7e0e7}
+    .secret:hover{background:#ffeaf0}
+    .secret-note{display:none;margin:11px 2px 0;padding:12px;border-radius:13px;background:#fff;color:#9e6577;font-size:13px;line-height:1.55;animation:appear .25s ease both}
+    .secret-note.show{display:block}
+    .footer{margin-top:17px;color:#ba9ba4;font-size:11px;letter-spacing:.02em}
+    .toast{position:fixed;z-index:5;left:50%;bottom:max(22px,env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;pointer-events:none;padding:12px 17px;border-radius:99px;background:#704d5b;color:white;font-size:13px;box-shadow:0 8px 24px #704d5b33;transition:.25s;white-space:nowrap}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .pop{position:fixed;z-index:4;pointer-events:none;animation:pop 1.6s ease-out forwards;font-size:24px}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-8px) rotate(7deg)}}
+    @keyframes beat{0%,100%{transform:rotate(10deg) scale(1)}50%{transform:rotate(10deg) scale(1.14)}}
+    @keyframes appear{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes pop{0%{opacity:0;transform:translate(-50%,0) scale(.5)}15%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--dx)), -130px) rotate(var(--rot)) scale(1.1)}}
+    @media(max-width:360px){body{padding:16px 12px}.card{padding:21px 17px;border-radius:25px}.scene{height:155px}.bear{transform:scale(.9) rotate(-4deg)}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <span class="tiny one" aria-hidden="true">✿</span><span class="tiny two" aria-hidden="true">♡</span><span class="tiny three" aria-hidden="true">✧</span>
+    <article class="card">
+      <div class="topline"><span>✦</span> surat permintaan maaf untuk iyaii <span>✦</span></div>
+      <div class="scene" aria-label="Ilustrasi beruang lucu yang membawa hati">
+        <div class="moon"></div><span class="spark s1">✦</span><span class="spark s2">✧</span>
+        <div class="bear"><i class="ear left"></i><i class="ear right"></i><i class="eye left"></i><i class="eye right"></i><i class="blush left"></i><i class="blush right"></i><i class="nose"></i><i class="mouth"></i><span class="heart">💗</span></div>
+      </div>
+      <h1>hai, <span id="headingName">iyaii</span> ♡</h1>
+      <p class="intro">ecaa tahu iyaii pasti lagi capek. jadi, ini surat kecil buat iyaii baca pelan pelan, nggak perlu buru buru dan ga perlu di bales apa apa.</p>
+      <label class="namebox"><span aria-hidden="true">💌</span><input id="nameInput" type="text" maxlength="24" value="iyaii" placeholder="Tulis nama panggilan di sini" aria-label="Nama panggilan pacar"></label>
+      <div class="letter"><p>maaf ya kalau aku bikin hari hari iyaii jadi kerasa lebih berat. iyaii nggak harus selalu kuat kok. istirahat dulu, tarik napas pelan pelan. kalau dunia lagi berisik, eca bakal jadi tempat pulang iyai. 🤍</p><span class="sign">— dari ecaa, orang yang sayang banget sama iyaii  ♡</span></div>
+      <div class="buttons">
+        <button class="hug" id="hugButton" type="button">klaim peluk virtual 🤗</button>
+        <button class="secret" id="secretButton" type="button" aria-expanded="false">ada pesan rahasia buat iyaii ✨</button>
+      </div>
+      <div class="secret-note" id="secretNote" role="status">pesan penting: iyaii boleh rebahan, ngemil, dan istirahat sebentar. ecaa tetap sayang sama iyaii, bahkan kalau iyaii jadi kentang 🥔💗</div>
+      <div class="footer">dibuat khusus untuk permintaan maaf dari ecaa: iyaii tersayang.</div>
+    </article>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite">peluk hangat sedang dikirim… 🤍</div>
+  <script>
+    const input = document.getElementById('nameInput');
+    const heading = document.getElementById('headingName');
+    input.addEventListener('input', () => { heading.textContent = input.value.trim() || 'sayang'; });
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    document.getElementById('hugButton').addEventListener('click', () => {
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+      const emojis = ['💗','🤍','💕','✨','🫶'];
+      for (let i = 0; i < 9; i++) {
+        const item = document.createElement('span');
+        item.className = 'pop';
+        item.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        item.style.left = (20 + Math.random() * 60) + 'vw';
+        item.style.top = (55 + Math.random() * 25) + 'vh';
+        item.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
+        item.style.setProperty('--rot', (Math.random() * 50 - 25) + 'deg');
+        document.body.appendChild(item);
+        setTimeout(() => item.remove(), 1700);
+      }
+    });
+    const secretButton = document.getElementById('secretButton');
+    const secretNote = document.getElementById('secretNote');
+    secretButton.addEventListener('click', () => {
+      const open = secretNote.classList.toggle('show');
+      secretButton.setAttribute('aria-expanded', String(open));
+      secretButton.textContent = open ? 'Tutup pesan rahasia ♡' : 'Ada pesan rahasia buat kamu ✨';
+    });
+  </script>
+</body>
+</html>
